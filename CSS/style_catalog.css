@@ -80,16 +80,16 @@ body{
 
 .filter{
 display: flex;
-
-
 }
 
 
 .filter_blok::-webkit-details-marker {
       display: none;
-      outline: none;
-     
-      
+      outline: none;         
+}
+
+.filter_blok {
+      cursor: pointer;
 }
 
 .filter_blok_menu {
@@ -116,7 +116,17 @@ display: flex;
       position: absolute;
       background: #FFFFFF;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      width: 360px;
     }
+.filter_blok_small {
+      cursor: pointer;
+}
+
+.filter_blok_small[open] {
+      cursor: pointer;
+}
+
+
 
 .filter_small_list{
 
