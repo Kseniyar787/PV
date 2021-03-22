@@ -373,13 +373,6 @@ form.feadback {
 
 
 
-
-
-
-
-
-
-
 .search_btn {
       background-color: #F16D7F;
       border: none;
@@ -390,6 +383,7 @@ form.feadback {
       font-weight: normal;
       font-size: 14px;
       line-height: 17px;
+      cursor: pointer;
 }
 
 
