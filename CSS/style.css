@@ -644,28 +644,42 @@ fill: #fc8e8e;
       margin: 18px 0 96px 0;
 }
 
-.scrolling_preview {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 19px; 
-      color: #C4C4C4;
-      text-decoration: none;
-      align-self: center;
-      margin-right: 23px;
-}
-.scrolling_link_first{
-      color: #EF5B70;
-}
+
 .scrolling_link_last{
       margin-right: 1px ;
 }
 
 .scrolling_sign {
       margin: 15px 16px 15px 16px;
+      outline: none;
+      background-color: none;
+
+}
+.scrolling_btn {
+      border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px; 
+    color: #C4C4C4;
+  
+}
+.scrolling_btn:hover {
+      color: #EF5B70;
+      
+}
+
+.scrolling_btn:active {
+      color: #EF5B70;
 }
 
 
+.scrollings {
+margin-right: 23px;
+}
 
 /* CSS FOR PRODACT */
 
