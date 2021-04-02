@@ -55,6 +55,51 @@ body{
       padding: 18px 0;
 }
 
+.input_header_menu {
+            position: relative;
+}
+
+      .input_header {
+            display: none;
+      }
+      
+      .input-menu {
+            display: block;
+      }
+      
+      .input-menu-list {
+            position: absolute;
+            background: $wight;
+            width: 232px;
+            height: 764px;
+      }
+      
+      .input_menu {
+            @include font (bold);
+            @include small-size;
+            color: #000000;
+            }
+
+      .input_men {
+            @include font (normal);
+            @include small-size;
+            color: $pink;
+      }
+
+
+.input_header:checked ~ .input-menu-list {
+      display: block;
+}
+.input_header:not(:checked) ~ .input-menu-list {
+      display: none;
+}
+
+
+
+
+
+
+
 .icons{
       @include center;
 }
