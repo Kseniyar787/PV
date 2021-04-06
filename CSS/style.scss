@@ -66,6 +66,9 @@ body{
       
       .input-menu {
             display: block;
+            
+
+            
       }
       
       .input-menu-list {
@@ -73,27 +76,66 @@ body{
             background: $wight;
             width: 232px;
             height: 764px;
+            top: 53px;
+            left: 171px;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+ }
+
+      .input_menu_btn {
+            position: absolute;
+            fill: #6F6E6E;
+            background: none;
+            border: none;
+            outline: none;
+            right: 7%;
+            top: 16px; 
+            cursor: pointer;
+            transform: rotate(0deg); 
+            transition: transform .6s; 
+            fill:#575757;
+      
+            &:hover{
+                  transform: rotate(180deg); 
+                  fill: $pink;
+        }
       }
+      
       
       .input_menu {
             @include font (bold);
             @include small-size;
             color: $dark;
-            }
+            margin: 37px 0 4px 34px;
+ }
 
       .input_men {
             @include font (normal);
             @include small-size;
             color: $pink;
+            margin: 20px 0 20px 33px;
+            list-style-type: none
       }
+
+.input_men li {
+      @include font (normal);
+      font-size: 14px;
+      line-height: 17px;
+      color: #6F6E6E;
+      margin: 11px 0 11px 31px;
+}
+
 
 
 .input_header:checked ~ .input-menu-list {
       display: block;
+           
 }
+
+
+
 .input_header:not(:checked) ~ .input-menu-list {
       display: none;
-}
+} 
 
 
 
@@ -145,22 +187,31 @@ body{
 }
 
 .promo_text {
-      transform: scale(1);
-      display: inline-block;
-      transition: 0.7s;
-      &:hover{
-           transform: scale(1.25);         
-      }
-}
-
-.promo_text {
       width: 50%;
       margin-top: -93px;
       margin-left: 64px;
       padding-left: 16px;
       color: $black;
       border-left: 12px solid $pink;
+      // transform: scale(1);
+      display: inline-block;
+      animation: text 1s 1 linear;
+      opacity: 1;
+      transition: 0.7s;
 }
+
+      @keyframes text {
+            0% { transform: scale(0.8);opacity: .85; }
+            50% { transform: scale(0.9); opacity: .95; }
+            100% { transform: scale(1); opacity: 1;}
+            
+            } 
+      // &:hover{
+      //      transform: scale(1.25);         
+      // }
+
+
+
 
 .promo_change_text {
       @include font(900);
@@ -283,15 +334,25 @@ body{
       background-color: #F8F8F8;
       margin-right: 30px;
       margin-bottom: 30px;
+      
 }
 
 .products_position{
       position: relative;
+      overflow: hidden;
+      
 }
 
 .products_img {
       display: block;
+      transition: 0.5s;
 }
+
+.products_position:hover .products_img {
+      transform: scale(1.11) translateY(5%);
+}
+
+
 .card-overlay {
       position: absolute;
       background: rgba(58, 56, 56, 0.86);
@@ -335,6 +396,11 @@ body{
       line-height: 16px;
       color: $dark;
       cursor: pointer;
+
+}
+.products_h3 a {
+color: inherit;
+
 }
 .products_item_card{
       text-decoration: none;
@@ -427,6 +493,7 @@ body{
       background-repeat: no-repeat;
       background-position: center;
       width: 100%;
+      background-size: cover;
 }
 
 .subscription_two_blocks {
@@ -817,6 +884,7 @@ padding: 8px 12px 9px 12px;
       margin-top: 5px;
       box-sizing: border-box;
       background: $wight;
+      z-index: 1;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
  }
 
@@ -828,6 +896,7 @@ padding: 8px 12px 9px 12px;
       margin-top: 5px;
       box-sizing: border-box;
       background: $wight;
+      z-index: 1;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
  }
 
@@ -839,6 +908,7 @@ padding: 8px 12px 9px 12px;
       margin-top: 5px;
       box-sizing: border-box;
       background: $wight;
+      z-index: 1;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
  }
 
