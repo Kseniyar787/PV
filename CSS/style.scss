@@ -48,8 +48,20 @@ body{
 .container {
       max-width: 1140px;
       margin: 0 auto;
-      outline: 1pt solid red;
+      // outline: 1pt solid red;
 }
+.top_main{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+}
+.subscription_footer {
+      flex-grow: 1;
+
+}
+
+
+
 .header { 
       
       background-color: #222222;
@@ -88,7 +100,7 @@ body{
             border: none;
             outline: none;
             right: 7%;
-            top: -19px;
+            top: 17px;
             cursor: pointer;
             transform: rotate(0deg); 
             transition: transform .6s; 
@@ -105,7 +117,7 @@ body{
             @include font (bold);
             @include small-size;
             color: $dark;
-            margin: 37px 0 4px 34px;
+            padding: 37px 0 4px 34px;
  }
 
       .input_men {
@@ -243,7 +255,7 @@ body{
 
 .center {
       padding: 0 calc(50% - 1140px / 2);
-      outline: 1pt solid red;
+      // outline: 1pt solid red;
 }
 
 .shop_list{
@@ -668,6 +680,7 @@ padding: 8px 12px 9px 12px;
       @include size;
       color: #FBFBFB;
 }
+
 
 
 
@@ -1131,7 +1144,7 @@ margin-right: 23px;
 
 .catalog_information_line {
       border: none;
-      width: 641px;
+      width: 56%;
       height: 1px;
       background-color: #EAEAEA;
       display: inline-block;
@@ -1321,7 +1334,13 @@ margin-right: 23px;
       position: relative;
       filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
       width: 652px;
+      height: 306px;
+     
       
+}
+.card_small_size {
+      width: 262px;
+      height: 306px;
 }
 
 .card_first {
@@ -1348,23 +1367,14 @@ margin-right: 23px;
   }
 }
 
-// .card_btn_svg {
-//       fill:#575757
-     
-//       transition: name 1s;  
 
-//       &:hover{
-//             transform: rotateY(360deg); 
-//             fill: red
-//       }
-// }
 
 .card_h3 {
       @include font (normal);
       @include big-size;
       color: $black;
       margin: 22px 0 42px 0;
-      width: 262px;
+      // width: 262px;
 }
 
 .card_text_block {
@@ -1387,6 +1397,7 @@ margin-right: 23px;
 .card_input {
       width: 44px;
       height: 25px;
+      outline: none;
 }
 .card_input  {
       @include font (normal);
@@ -1452,6 +1463,7 @@ input::-webkit-inner-spin-button {
       font-size: 13px;
       line-height: 16px;
       color: #B1B1B1;
+      
   }
 
   .card_second::placeholder {
@@ -1461,6 +1473,14 @@ input::-webkit-inner-spin-button {
       color: $black;
 
   }
+
+.card_second_last::placeholder {
+      @include font(300);
+      font-size: 13px;
+      line-height: 16px;
+      color: $black;
+}
+
   .card_second {
         margin: 20px 0;
   }
@@ -1493,9 +1513,9 @@ input::-webkit-inner-spin-button {
 
 .card__cheackout {
       height: 214px;
-      width: 360px;
+      min-width: 360px;
       background: #F5F3F3;
-      padding: 39px 42px 41px 44px;
+      padding: 39px 34px 42px 44px;
       box-sizing: border-box;
 
       
@@ -1527,8 +1547,9 @@ input::-webkit-inner-spin-button {
 }
 
 .card_cheackout_btn {
-     width: 273px;
-     height: 50px;
+//      width: 273px;
+//      height: 50px;
+      padding: 15px 41px 16px 41px;
       background: $pink;
       border: 1px solid $pink;
       @include font(300);
@@ -1627,12 +1648,17 @@ input::-webkit-inner-spin-button {
  }
  .loyality {
        margin-right:26px;
+       margin-left: 22px;
  }
 
  .loyality-list{
 
       list-style-type: none;
 }
+.loyality_li {
+      display: flex;
+} 
+
 .loyality-header {
       @include font (300);
       @include  big-size;
@@ -1669,27 +1695,28 @@ input::-webkit-inner-spin-button {
  }
 
 
+ .registration_general {
+      display: flex;
+      justify-content: space-between;
+      margin: 64px 0 96px 0;
+      flex-wrap: wrap;
+}
+
+
 //--------media index--------------
 
-
-// @media (max-width: 1140px) {
-//       .promo_container {
-           
-//             background-position: -187px bottom;
-//       }
-// }
 
 @media (max-width: 1040px) {
 
 
 .container {
       padding: 0 16px;   
-      outline: 1pt solid red;
+  
 }
 
 .center {
       padding: 0 16px;  
-      outline: 1pt solid red;   
+      
 }
 
 .header_link {
@@ -1829,7 +1856,7 @@ input::-webkit-inner-spin-button {
       margin: 0 16px;
 }
 
-// ----------CATALOG-----------------------------
+// ----------CATALOG 1040px-----------------------------
 
 
 
@@ -1851,6 +1878,10 @@ input::-webkit-inner-spin-button {
       margin-left: 0;
       
 }
+.filter_list_three {
+    
+      width: 69px;
+}
 
 .products_item_hidden {
       display: none;
@@ -1860,7 +1891,7 @@ input::-webkit-inner-spin-button {
       
       margin: 24px 0 63px 0;
   }
-// ----------PRODACT-----------------------------
+// ----------PRODACT 1040px-----------------------------
 
 .prodacts_six {
       display: none;
@@ -1910,31 +1941,94 @@ input::-webkit-inner-spin-button {
   .card__cheackout {
      margin-left: 15px;
      margin-top: 39px;
-      
+//      padding: 48px 42px 41px 44px;
 }
+
+
+  
+      
+  
+ 
 .btn__for_card {
 
       justify-content: center;
   }
-  .btn__for_card_one {
-        margin-left: 45px;
+  .btn_shopping {
+        margin-right: 22px;
   }
 
+  .btn_cart_one {
+      margin-left: 22px;
+  }
+
+//   .btn_cart_one a {
+//       color: inherit;
+//       text-decoration: none;
+//   }
+ 
+// ---------------REGISTRATION 1040px---------------
+
+  .registration_general {
+      justify-content: center;
+      margin: 0px 0 96px 0;
+}
+.registration_card {
+      margin-top: 40px;
+}
+
+.loyality {
+      
+      margin-right: 0px;
+      width: 354px;
+      
+}
+
+.loyality-page {
+      margin: 32px 0;
+      width: 622px;
+  
+}
+  
+    .loyality-header {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 40px;
+
+    }
+  
+    .loyality-page {
+        font-size: 16px;
+        line-height: 19px;
+        width: 354px;
+    }
+  
+    .loyality-list li {
+        font-size: 16px;
+        line-height: 19px;
+  }
+  .loyality_li_p{
+      width: 314px;
+
+  }
+
+ 
 
 
 
 }
+
+
+
 
 @media (max-width: 748px) {
 
 .container {
       padding: 0 9px;   
-      outline: 1pt solid red;
 }
 
 .center {
       padding: 0 9px;  
-      outline: 1pt solid red;   
+     
 }
 
 
@@ -2018,7 +2112,7 @@ margin-bottom: 65px;
 }
 
 .advantages {
-padding-top: 0px;
+      padding-top: 0px;
       padding-bottom: 81px;
 
 }
@@ -2033,8 +2127,7 @@ padding-top: 0px;
 .subscription_right_header {
       margin-bottom: 22px;
   }
-  .subscription_text {
-     
+  .subscription_text { 
       font-size: 14px;
       line-height: 21px;
       
@@ -2082,7 +2175,13 @@ padding-top: 0px;
 .catalog_cards_header_h {
       padding-bottom: 32px;
 }
+.filter-subblock {
+      width: 30vh;
+  }
+  .filter_list_three {
+      width: 71px;
 
+  }
 
 .filter-alignment {
     padding: 11px 0 19px 0; 
@@ -2095,6 +2194,24 @@ padding-top: 0px;
 .filter_blok_menu span {
       display: none;
 }
+
+.filter_blok_menu_text {
+      font-size: 12px;
+      line-height: 14px;
+      font-style: normal;
+      font-weight: normal;    
+  }
+
+  .trending {
+      width: 117px;
+  }
+
+  .size {
+      width: 45px;
+  }
+  .price {
+      width: 54px;
+  }
 
 .svg_menu {
 
@@ -2117,7 +2234,7 @@ padding-top: 0px;
 // ----------PRODACT 748px-----------------------------
 
 .catalog_information_paragraf {
-      width: 326px   
+      width: 326px;  
 }
 
 .product-filter .input-title {
@@ -2139,17 +2256,128 @@ padding-top: 0px;
 
 
 // ----------CARD 748px-----------------------------
+.input_menu {
+      padding: 25px 0 4px 34px;
+}
 
+.input_men {
+      margin: 0 0 0 33px;
+
+}
 .catalog_for_card {
       padding-bottom: 0px;
 }
 
-.card_second_part {
-      display: contents;
+.card_general {
+         margin: 36px 0 96px 0;
   }
 
 
+.card_item {
+      height:188px;
+}
 
+.card_first {
+      margin: 32px 0 30px 0;
+  }
+
+
+.card_second_part {
+      display: contents;
+  }
+  .card__cheackout {
+      margin-left: 0;
+      margin-top: 48px;
+      
+ }
+
+.card_small_size {
+      height: 188px;
+      width: 143px;
+}
+.card_h3 {
+      font-size: 16px;
+      line-height: 19px;
+      margin: 13px 0 26px 0;
+}
+
+.card_text {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 4px;
+}
+
+.card_input {
+      width: 24px;
+      height: 15px;
+      font-size: 10px;
+      line-height: 12px;
+     
+}
+.card_text_block {
+      margin-left: 17px;
+
+  }
+
+.card_btn_svg {
+      width: 10px;
+      height: 10px;
+  }
+
+  .btn__for_card_one {
+      padding: 9px 18px;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 48px;
+  }
+  .btn_span {
+      text-transform: lowercase;
+  }
+  .btn_shopping {
+      margin-right: 4px;
+}
+
+.btn_cart_one {
+    margin-left: 4px;
+}
+
+// ----------REGICTRATION 748px-----------------------------
+
+.registration_block {
+      background-color: #F8F3F4;
+      padding: 59px 0 60px 0;
+}
+
+.registration_card {
+      margin-top: 40px;
+}
+
+.registration_header {
+      padding-bottom: 0px;
+}
+
+
+ .loyality-header {
+        font-size: 16px;
+        line-height: 19px;
+        margin: 40px 0 32px;
+        
+    }
+
+    element.style {
+      margin-right: 0px;
+      margin-left: 0;
+      
+  }
+
+  .loyality_li_p{
+      width: 314px;
+
+  }
+
+  .registration_general {
+      justify-content: center;
+      margin: 0px 0 100px 0;
 }
 
 
@@ -2159,7 +2387,4 @@ padding-top: 0px;
 
 
 
-
-
-
-
+}
