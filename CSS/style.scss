@@ -338,28 +338,30 @@ body{
       text-align: center; 
       margin-bottom: 48px;
 }
-.products_all_item_cnt {
-      margin-bottom: 30px;
-}
+
 
 .products_all_item {
-      display: flex;
+      // display: flex;
+      display: grid;
       justify-content: center;
       flex-wrap: wrap;
-      margin-right: -30px;
-      margin-bottom: -30px;
+      grid-template-columns: repeat(auto-fill, 360px);
+      grid-gap: 30px;
+      gap: 30px;
+      width: 100%;
+
 
 }
-
-
 
 .products_item {
       width: 360px;
       background-color: #F8F8F8;
-      margin-right: 30px;
-      margin-bottom: 30px;
-      
+      // margin-right: 30px;
+      // margin-bottom: 30px;   
 }
+// .products_item:nth-child(3n){
+//       margin-right: 0px;
+// }
 
 .products_position{
       position: relative;
@@ -453,7 +455,7 @@ color: inherit;
       border: 1px solid #FF6A6A;
       @include block;
       margin-bottom: 95px;
-      margin-top: 18px;
+      margin-top: 48px;
       transition: 0.7s;
       
 
@@ -1789,23 +1791,30 @@ input::-webkit-inner-spin-button {
 }
 
 .products_all_item {
-    
-      margin-right: -16px;
-      margin-bottom: -16px;
-
+      grid-gap: 16px;
+      gap: 16px;
+      
 }
 
-.products_item {
-      margin-right: 16px;
-      margin-bottom: 16px;   
-}
-.products_all_item_cnt {
-      margin-bottom: 16px;
-}
+// .products_item {
+//       margin-right: 16px;
+//       margin-bottom: 16px;   
+// }
+// .products_item:nth-child(3n){
+//       margin-right: 16px;
+// }
+
+// .products_item:nth-child(2n){
+//       margin-right: 0px;
+// }
+
+
+
+
 .bottom {
    
       margin-bottom: 64px;
-      margin-top: 16px;
+      margin-top: 34px;
 }
       
 .advantages{
@@ -2011,8 +2020,6 @@ input::-webkit-inner-spin-button {
 
   }
 
- 
-
 
 
 }
@@ -2106,9 +2113,15 @@ input::-webkit-inner-spin-button {
 .products_p {
 margin-bottom: 65px;
 }
+.products_all_item {
+      grid-gap: 16px;
+      gap: 16px;
+      
+}
+
 .bottom {
-      margin-bottom: 96px;
-      margin-top: 25px;
+      margin-bottom: 110px;
+      margin-top: 41px;
 }
 
 .advantages {
@@ -2231,7 +2244,14 @@ margin-bottom: 65px;
       width: 359px;
 
   }
-// ----------PRODACT 748px-----------------------------
+// ----------PRODUCT 748px-----------------------------
+
+// .hidden_women :last-child {
+//       display: grid;
+// }
+.prodacts_six {
+      display: grid;
+}
 
 .catalog_information_paragraf {
       width: 326px;  

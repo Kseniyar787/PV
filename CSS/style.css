@@ -373,28 +373,24 @@ body {
   margin-bottom: 48px;
 }
 
-.products_all_item_cnt {
-  margin-bottom: 30px;
-}
-
 .products_all_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  -ms-grid-columns: (360px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 360px);
+  grid-gap: 30px;
+  gap: 30px;
+  width: 100%;
 }
 
 .products_item {
   width: 360px;
   background-color: #F8F8F8;
-  margin-right: 30px;
-  margin-bottom: 30px;
 }
 
 .products_position {
@@ -500,7 +496,7 @@ body {
   display: inline-block;
   text-decoration: none;
   margin-bottom: 95px;
-  margin-top: 18px;
+  margin-top: 48px;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
@@ -1975,19 +1971,12 @@ input::-webkit-inner-spin-button {
     line-height: 29px;
   }
   .products_all_item {
-    margin-right: -16px;
-    margin-bottom: -16px;
-  }
-  .products_item {
-    margin-right: 16px;
-    margin-bottom: 16px;
-  }
-  .products_all_item_cnt {
-    margin-bottom: 16px;
+    grid-gap: 16px;
+    gap: 16px;
   }
   .bottom {
     margin-bottom: 64px;
-    margin-top: 16px;
+    margin-top: 34px;
   }
   .advantages {
     padding-top: 0px;
@@ -2118,10 +2107,6 @@ input::-webkit-inner-spin-button {
   .btn_cart_one {
     margin-left: 22px;
   }
-  .btn_cart_one a {
-    color: inherit;
-    text-decoration: none;
-  }
   .registration_general {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2226,9 +2211,13 @@ input::-webkit-inner-spin-button {
   .products_p {
     margin-bottom: 65px;
   }
+  .products_all_item {
+    grid-gap: 16px;
+    gap: 16px;
+  }
   .bottom {
-    margin-bottom: 96px;
-    margin-top: 25px;
+    margin-bottom: 110px;
+    margin-top: 41px;
   }
   .advantages {
     padding-top: 0px;
@@ -2336,6 +2325,10 @@ input::-webkit-inner-spin-button {
   }
   .products_item {
     width: 359px;
+  }
+  .prodacts_six {
+    display: -ms-grid;
+    display: grid;
   }
   .catalog_information_paragraf {
     width: 326px;
